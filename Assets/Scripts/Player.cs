@@ -80,6 +80,12 @@ public class Player : MonoBehaviour
             GameController.instance.ShowGameOver();
             Destroy(gameObject);
         }
+
+        if (collission.gameObject.tag == "serra")
+        {
+            GameController.instance.ShowGameOver();
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionExit2D(Collision2D collission)
@@ -90,4 +96,5 @@ public class Player : MonoBehaviour
         }
 
     }
+
 }
