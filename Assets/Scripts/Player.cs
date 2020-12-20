@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public bool isJumping;
     public bool doubleJump;
 
+    bool isBlowing;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour
     }
     void Jump()
     {
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && !isBlowing)
         {
             if (!isJumping)
             {
@@ -95,6 +96,22 @@ public class Player : MonoBehaviour
             isJumping = true;
         }
 
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.gameObject.layer == 11)
+        {
+            isBlowing = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.layer == 11)
+        {
+            isBlowing = false;
+        }
     }
 
 }

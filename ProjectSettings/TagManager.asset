@@ -6,6 +6,7 @@ TagManager:
   tags:
   - spike
   - serra
+  - fan
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Ground
   - GameOver
   - Enemy
-  - 
+  - fan
   - 
   - 
   - 
