@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8373264141516079246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.004, y: 0.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.004, y: 0.111, z: 0}
+  m_LocalScale: {x: 1, y: 0.9783711, z: 1}
   m_Children: []
   m_Father: {fileID: 8373264142972316948}
   m_RootOrder: 2
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8373264141918018331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.075, z: 0}
+  m_LocalPosition: {x: 0.1912, y: -0.0866, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8373264142972316948}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8373264142329656379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1912, y: 0.0812, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8373264142972316948}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8373264142972316945}
   - component: {fileID: 8373264142972316950}
   - component: {fileID: 8373264142972316947}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Frog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 8373264142972316954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.513, y: 2.148, z: 0}
-  m_LocalScale: {x: 1.2703977, y: 1.1769046, z: 0.8832111}
+  m_LocalScale: {x: 1.5882007, y: 1.4608896, z: 0.6983831}
   m_Children:
   - {fileID: 8373264142329656378}
   - {fileID: 8373264141918018330}
@@ -212,7 +212,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019698963, y: 0.07041958}
+  m_Offset: {x: -0.00044286996, y: 0.07902686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -223,7 +223,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20573024, y: 0.06857368}
+  m_Size: {x: 0.28533286, y: 0.085788265}
   m_EdgeRadius: 0
 --- !u!50 &8373264142972316945
 Rigidbody2D:
@@ -264,7 +264,9 @@ MonoBehaviour:
   headPoint: {fileID: 8373264141516079241}
   layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
+  boxCollider2D: {fileID: 8373264142972316944}
+  circleCollider2D: {fileID: 8373264142972316947}
 --- !u!58 &8373264142972316947
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -278,6 +280,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02345633}
+  m_Offset: {x: 0.0063790786, y: -0.0058269403}
   serializedVersion: 2
-  m_Radius: 0.08032541
+  m_Radius: 0.100672826

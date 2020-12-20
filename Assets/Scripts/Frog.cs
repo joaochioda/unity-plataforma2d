@@ -30,7 +30,7 @@ public class Frog : MonoBehaviour
     void Update()
     {
         rig.velocity = new Vector2(speed, rig.velocity.y);
-        colliding = Physics2D.Linecast(rightCol.position, leftCol.position);
+        colliding = Physics2D.Linecast(rightCol.position, leftCol.position, layer);
         if (colliding)
         {
             transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
@@ -38,13 +38,16 @@ public class Frog : MonoBehaviour
         }
     }
 
+    bool playerDestroyed = false;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             float height = collision.contacts[0].point.y - headPoint.position.y;
-            if (height >0)
+
+            if (height >0 && !playerDestroyed)
             {
+
                 collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 2, ForceMode2D.Impulse);
                 anim.SetTrigger("die");
                 boxCollider2D.enabled = false;
@@ -53,6 +56,12 @@ public class Frog : MonoBehaviour
                 Destroy(gameObject, 0.4f);
                 speed = 0;
             }
-        }
+            else
+            {
+                playerDestroyed = true;
+                GameController.instance.ShowGameOver();
+                Destroy(collision.gameObject);
+            }
+        } 
     }
 }
